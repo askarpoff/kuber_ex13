@@ -24,12 +24,23 @@
 
     [cache.yaml](https://github.com/askarpoff/kuber_ex13/blob/main/manifests/main/cache.yaml)
    
-3. В качестве образа использовать network-multitool.
+2. В качестве образа использовать network-multitool.
    
    ![image](https://github.com/askarpoff/kuber_ex13/assets/108946489/535eca37-9dcc-46d3-803a-f8a561f62fd8)
    
-4. Разместить поды в namespace App.
+3. Разместить поды в namespace App.
+
+   ![image](https://github.com/askarpoff/kuber_ex13/assets/108946489/6edcb94f-6721-416a-9d4b-09ca399a1ff6)
+
+4. Создать политики, чтобы обеспечить доступ frontend -> backend -> cache. Другие виды подключений должны быть запрещены.
+
+   Политика по-умолчанию запрещает всё
+   [default.yaml](https://github.com/askarpoff/kuber_ex13/blob/main/manifests/network-policy/default.yaml)
+
+   Политика бэкенда разрешает доступ от фронтенда
+   [backend.yaml](https://github.com/askarpoff/kuber_ex13/blob/main/manifests/network-policy/backend.yaml)
+
+   Политика кэша разрешает доступ от бэкенда
+   [cache.yaml](https://github.com/askarpoff/kuber_ex13/blob/main/manifests/network-policy/cache.yaml)
    
-5. Создать политики, чтобы обеспечить доступ frontend -> backend -> cache. Другие виды подключений должны быть запрещены.
-   
-4. Продемонстрировать, что трафик разрешён и запрещён.
+5. Продемонстрировать, что трафик разрешён и запрещён.
