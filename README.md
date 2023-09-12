@@ -44,3 +44,6 @@
    [cache.yaml](https://github.com/askarpoff/kuber_ex13/blob/main/manifests/network-policy/cache.yaml)
    
 5. Продемонстрировать, что трафик разрешён и запрещён.
+
+   ![image](https://github.com/askarpoff/kuber_ex13/assets/108946489/22f74c99-0350-4f5e-b8fa-7001d56aced6)
+
